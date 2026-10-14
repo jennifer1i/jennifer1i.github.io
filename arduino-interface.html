@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arduino Interface Board — Jennifer Li</title>
+  <meta name="description" content="A 12V driver board for LED neon signs, with Arduino Nano–based toggling and dimming and an integrated 12V-to-5V buck.">
+  <meta name="theme-color" content="#111513">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arduino Interface Board — Jennifer Li">
+  <meta property="og:description" content="A 12V driver board for LED neon signs, with Arduino Nano–based toggling and dimming and an integrated 12V-to-5V buck.">
+  <meta property="og:url" content="https://jennifer1i.github.io/arduino-interface.html">
+  <meta property="og:image" content="https://jennifer1i.github.io/images/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="board">
+
+  <nav class="nav" aria-label="Main">
+    <a class="home" href="index.html">Jennifer Li</a>
+    <ul>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="resume.pdf">Resume</a></li>
+      <li><a href="https://github.com/jennifer1i">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/jennifer-li-ece/">LinkedIn</a></li>
+      <li><a href="mailto:enfutureli@gmail.com">Email</a></li>
+    </ul>
+  </nav>
+
+<main class="project">
+  <a class="crumb" href="index.html#personal">← Personal Projects</a>
+  <header>
+    <p class="eyebrow">Personal project · 2025 – 2026</p>
+    <h1>Arduino Interface Board</h1>
+    <p class="lede">A 12V driver board for LED neon signs, with Arduino Nano–based toggling and dimming and an integrated 12V-to-5V buck.</p>
+    <ul class="chips">
+      <li>2 layers · 1.6 mm</li>
+      <li>KiCad</li>
+      <li>Rev A built · Rev B designed</li>
+    </ul>
+  </header>
+
+  <section class="stage">
+    <h2>Rev A</h2>
+    <div class="row">
+      <figure class="shot" style="--ar: 1.655">
+        <a class="zoom" href="images/arduino/reva-photo-large.webp"><img src="images/arduino/reva-photo-1200.webp" srcset="images/arduino/reva-photo-640.webp 640w, images/arduino/reva-photo-1200.webp 1200w, images/arduino/reva-photo-large.webp 1768w" sizes="(max-width: 720px) calc(100vw - 66px), 565px" width="1200" height="725" alt="Assembled green Rev A board with an Arduino Nano and screw terminals" loading="lazy" decoding="async"></a>
+        <figcaption>Rev A, assembled</figcaption>
+      </figure>
+      <figure class="shot" style="--ar: 1.275">
+        <a class="zoom" href="images/arduino/reva-layout-large.webp"><img src="images/arduino/reva-layout-1200.webp" srcset="images/arduino/reva-layout-640.webp 640w, images/arduino/reva-layout-1200.webp 1200w, images/arduino/reva-layout-large.webp 1762w" sizes="(max-width: 720px) calc(100vw - 66px), 435px" width="1200" height="941" alt="KiCad layout of the Rev A board" loading="lazy" decoding="async"></a>
+        <figcaption>Rev A layout</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="stage">
+    <h2>Rev B</h2>
+    <p class="note">A cleaner redesign, not yet fabricated.</p>
+    <div class="split">
+      <figure class="shot">
+        <a class="zoom" href="images/arduino/revb-layout-1200.webp"><img src="images/arduino/revb-layout-1200.webp" srcset="images/arduino/revb-layout-640.webp 640w, images/arduino/revb-layout-1200.webp 1060w" sizes="(max-width: 720px) calc(100vw - 66px), 460px" width="1060" height="1414" alt="KiCad layout of the Rev B board" loading="lazy" decoding="async"></a>
+        <figcaption>Rev B layout (37.4 × 59.1 mm)</figcaption>
+      </figure>
+      <div class="prose">
+        <h3>Features</h3>
+        <ul>
+        <li>12V input power architecture</li>
+        <li>12V→5V integrated buck converter</li>
+        <li>Multi-channel nMOSFET LED control</li>
+        <li>Arduino Nano–based LED toggling and dimming</li>
+        <li>Optimized for compact and clean routing</li>
+        <li>SMT/SMD and THT assembly</li>
+        <li>Test points for GND, 12V, 5V, and PWM</li>
+        <li>Indicator LEDs with blank silkscreen for post-production debugging</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="stage prose">
+    <h2>Design notes</h2>
+    <div style="margin-top: 14px">
+      <p>The PCB was designed to be rectangular, optimizing balanced LED power distribution and component placement. Test points and button switches were placed along the sides for easier access in the debugging process.</p>
+      <p>For this design, I chose to have two LED output terminals after evaluating the maximum load requirement of the targeted LED strips. The strips I chose draw up to 5A, and thus my output circuits were designed to handle up to roughly 2.5A.</p>
+      <p>In addition, these two terminals were placed on opposite ends of the PCB&#x27;s length to simplify high-current routing, reduce congestion, and distribute power evenly across the final neon sign product without unnecessary harnessing crossover. To accommodate this placement, I used a 12V pour on the top layer in an area with minimal top-layer GND pads and minimal top-layer routing. Thus, I could provide a clean, low-impedance power distribution between the input stage and the LED output terminal on the opposite end of the board.</p>
+    </div>
+  </section>
+
+  <section class="stage prose">
+    <h2>PCB specifications</h2>
+    <dl class="specs" style="margin-top: 14px">
+      <dt>Layers</dt><dd>2</dd>
+      <dt>PCB thickness</dt><dd>1.6 mm</dd>
+      <dt>Assembly</dt><dd>SMT/SMD and THT</dd>
+      <dt>Designed in</dt><dd>KiCad</dd>
+    </dl>
+  </section>
+
+  <section class="stage prose">
+    <h2>Future improvements</h2>
+    <ul style="margin-top: 14px">
+      <li>Switch to addressable LED strips for firmware-controlled animation and color effects</li>
+      <li>Transition to a fully integrated MCU system (ESP32) directly mounted on the PCB</li>
+      <li>Use lower-profile connectors like Molex Nano-Fit instead of screw terminals</li>
+      <li>Rework the user input interface, using more ergonomic controls like potentiometers, rotary encoders, or low-profile switches</li>
+      <li>Add additional protection circuitry, including input fuses, TVS diodes, reverse-polarity protection, and overvoltage and undervoltage protection</li>
+      <li>Implement per-channel current sensing and thermal monitoring</li>
+      <li>Enable the buck converter&#x27;s PG pin and add output sensing</li>
+    </ul>
+    <p style="margin-top: 18px">Several of these carried into the next project, the <a href="led-controller.html">Addressable LED Strip Controller</a>.</p>
+  </section>
+
+  <a class="next" href="led-controller.html">
+    <span><span class="label">Next project</span><span class="name">Addressable LED Strip Controller</span></span>
+    <span class="arrow" aria-hidden="true">→</span>
+  </a>
+</main>
+
+  <footer class="foot">
+    <span>© 2026 Jennifer Li</span>
+    <a href="mailto:enfutureli@gmail.com">enfutureli@gmail.com</a>
+  </footer>
+</div>
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <img alt="">
+  <p class="lb-cap"></p>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>

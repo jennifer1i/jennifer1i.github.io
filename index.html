@@ -1,194 +1,135 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jennifer Li | Electrical Engineering</title>
-<meta name="description" content="Jennifer Li: ECE and Mathematics at UT Austin. Low-voltage power hardware, PCB design, and embedded firmware for Longhorn Racing Solar.">
-<style>
-  :root {
-    --bg: #fbfaf7;
-    --surface: #ffffff;
-    --text: #1c1f1d;
-    --muted: #5b625e;
-    --line: #e3e1da;
-    --accent: #1f6b47;
-    --accent-soft: #e6f0ea;
-    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #121513;
-      --surface: #191d1b;
-      --text: #e8ebe9;
-      --muted: #a2aaa5;
-      --line: #2a302d;
-      --accent: #6fcf9b;
-      --accent-soft: #1d2b24;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font: 16px/1.6 var(--sans);
-  }
-  main { max-width: 760px; margin: 0 auto; padding: 64px 20px 48px; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  header h1 { font-size: 2.4rem; line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.02em; }
-  .role { color: var(--muted); margin: 0 0 16px; font-size: 1.05rem; }
-  .links { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 0.95rem; }
-  .intro { margin: 28px 0 0; max-width: 62ch; }
-
-  h2 {
-    font-family: var(--mono);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 56px 0 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .project {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 22px 24px;
-    margin-bottom: 16px;
-  }
-  .project-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
-  .project h3 { margin: 0; font-size: 1.12rem; }
-  .meta { color: var(--muted); font-size: 0.88rem; white-space: nowrap; }
-  .org { color: var(--muted); font-size: 0.92rem; margin: 2px 0 0; }
-  .status {
-    display: inline-block;
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    color: var(--accent);
-    background: var(--accent-soft);
-    border-radius: 4px;
-    padding: 1px 7px;
-    margin-left: 6px;
-    vertical-align: 2px;
-  }
-  .project ul { margin: 12px 0 14px; padding-left: 20px; }
-  .project li { margin-bottom: 6px; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tags span {
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    color: var(--muted);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 1px 8px;
-  }
-
-  .roles { display: grid; gap: 14px; }
-  .roles div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; }
-  .roles strong { font-weight: 600; }
-
-  .skills { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; font-size: 0.95rem; }
-  .skills dt { font-weight: 600; }
-  .skills dd { margin: 0; color: var(--muted); }
-
-  .note { color: var(--muted); font-size: 0.9rem; margin-top: 48px; }
-  footer { color: var(--muted); font-size: 0.85rem; margin-top: 24px; }
-
-  @media (max-width: 560px) {
-    main { padding-top: 40px; }
-    header h1 { font-size: 2rem; }
-    .project { padding: 18px 16px; }
-    .skills { grid-template-columns: 1fr; gap: 2px; }
-    .skills dd { margin-bottom: 10px; }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jennifer Li — Portfolio</title>
+  <meta name="description" content="Jennifer Li: Electrical &amp; Computer Engineering and Mathematics at UT Austin. PCB design, power electronics, and embedded firmware.">
+  <meta name="theme-color" content="#111513">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jennifer Li — Portfolio">
+  <meta property="og:description" content="Jennifer Li: Electrical &amp; Computer Engineering and Mathematics at UT Austin. PCB design, power electronics, and embedded firmware.">
+  <meta property="og:url" content="https://jennifer1i.github.io/">
+  <meta property="og:image" content="https://jennifer1i.github.io/images/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="board">
+
+  <nav class="nav" aria-label="Main">
+    <a class="home" href="index.html">Jennifer Li</a>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="resume.pdf">Resume</a></li>
+      <li><a href="https://github.com/jennifer1i">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/jennifer-li-ece/">LinkedIn</a></li>
+      <li><a href="mailto:enfutureli@gmail.com">Email</a></li>
+    </ul>
+  </nav>
+
 <main>
-  <header>
-    <h1>Jennifer Li</h1>
-    <p class="role">Electrical &amp; Computer Engineering and Mathematics, UT Austin</p>
-    <nav class="links">
-      <a href="mailto:enfutureli@gmail.com">enfutureli@gmail.com</a>
-      <a href="https://www.linkedin.com/in/jennifer-li-ece/">LinkedIn</a>
-    </nav>
-    <p class="intro">I design, build, and bring up low-voltage power hardware for Longhorn Racing Solar's solar car, from schematic and layout through harnessing, firmware, and on-car validation.</p>
-  </header>
-
-  <section>
-    <h2>Projects</h2>
-
-    <article class="project">
-      <div class="project-head">
-        <h3>Motor Controller &amp; MPPT Interface PCBs</h3>
-        <span class="meta">Sep 2025 – Jun 2026</span>
+  <section class="hero">
+    <div>
+      <div class="id">
+        <img class="headshot" src="images/headshot.webp" width="320" height="320" alt="Jennifer Li">
+        <h1>Jennifer Li</h1>
       </div>
-      <p class="org">Longhorn Racing Solar</p>
-      <ul>
-        <li>24V-to-12V power protection and thermal-management board that keeps the car's motor controller and MPPTs below thermal shutdown. Built 5 hot-swappable units; none failed across all three FSGP 2026 race days.</li>
-        <li>Cooling firmware in embedded C on an STM32L4 with FreeRTOS: a CAN ISR feeds temperatures to a control task driving PWM fans, holding both subsystems under 55°C and forcing 100% duty after missed readings.</li>
-        <li>Traced dead fan outputs to a MOSFET gate threshold above the 3.3V drive and buck failures to a regulator run at its absolute-max input, then respun with logic-level FETs and higher-margin parts.</li>
-      </ul>
-      <div class="tags"><span>STM32L4</span><span>FreeRTOS</span><span>CAN</span><span>PWM</span><span>Power protection</span></div>
-    </article>
-
-    <article class="project">
-      <div class="project-head">
-        <h3>Low-Voltage Carrier Board <span class="status">in bring-up</span></h3>
-        <span class="meta">Jun 2026 – Present</span>
+      <p class="sub">Electrical &amp; Computer Engineering and Mathematics at UT&nbsp;Austin</p>
+      <p class="intro">I design power electronics for a solar race car and write the embedded firmware that runs on them.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn" href="resume.pdf">Resume (PDF)</a>
       </div>
-      <p class="org">Longhorn Racing Solar</p>
-      <ul>
-        <li>4-layer KiCad board designed to supply 150W (12.5A at 12V) from the car's 120V, 5kWh pack to every low-voltage system, through a 92%-efficient isolated DC/DC with ideal-diode source switching.</li>
-        <li>Voltage, current, and power monitoring at four points using Hall-effect sensors, chosen over shunt resistors in a cost, size, and availability trade study, reporting system health over CAN.</li>
-        <li>STM32G4-controlled precharge that holds off the load until the bus charges, plus a CC/CV buck-boost charger for the supplemental pack with low-voltage cutoff.</li>
-      </ul>
-      <div class="tags"><span>KiCad</span><span>STM32G4</span><span>Isolated DC/DC</span><span>CAN</span><span>Precharge</span></div>
-    </article>
+    </div>
 
-    <article class="project">
-      <div class="project-head">
-        <h3>Addressable LED Strip Controller PCB</h3>
-        <span class="meta">Jun 2026 – Present</span>
-      </div>
-      <p class="org">Personal project</p>
-      <ul>
-        <li>USB-C controller built around an ESP32-S3 that drives WS2812B strips for color-changing and audio-reactive signs, carried through a second revision.</li>
-        <li>Negotiates a 9V USB-PD contract to get more power to the LED rail than stock 5V USB allows at the same cable current.</li>
-        <li>Multi-rail supply with input protection (fuse, TVS, reverse polarity), a 9V-to-5V buck, a 5V-to-3.3V LDO, and a filtered analog rail that isolates the microphone from switching noise.</li>
-      </ul>
-      <div class="tags"><span>ESP32-S3</span><span>USB-PD</span><span>Buck / LDO</span><span>Mixed-signal</span></div>
-    </article>
+    <a class="latest" href="lv-carrier.html">
+      <img src="images/lvc/arrived-1200.webp" srcset="images/lvc/arrived-640.webp 640w, images/lvc/arrived-1200.webp 1200w, images/lvc/arrived-large.webp 2000w" sizes="(max-width: 960px) calc(100vw - 66px), 480px" width="1200" height="900" alt="Fabricated Rev A LV Carrier board">
+      <span class="flag">Latest project</span>
+      <span class="body">
+        <span>
+          <span class="title">Low-Voltage Carrier Board</span>
+          <span class="status">Fabricated · in bring-up</span>
+        </span>
+        <span class="go">View project →</span>
+      </span>
+    </a>
   </section>
 
-  <section>
-    <h2>Experience</h2>
-    <div class="roles">
-      <div><span><strong>Low Voltage Specialist</strong>, Longhorn Racing Solar</span><span class="meta">Sep 2025 – Present</span></div>
-      <div><span><strong>ECE Tutor</strong>, Cockrell School of Engineering</span><span class="meta">Sep 2026 – Present</span></div>
+  <div id="projects">
+  <section class="group" id="lhr" aria-labelledby="lhr-h">
+    <div class="group-head">
+      <h2 id="lhr-h">Longhorn Racing Solar</h2>
+      <p>UT Austin solar car team · Low Voltage Specialist</p>
+    </div>
+    <div class="cards">
+      <a class="card" href="motor-controller-mppt.html">
+        <div class="thumb"><img src="images/moco/oncar-2-640.webp" srcset="images/moco/oncar-2-640.webp 640w, images/moco/oncar-2-1200.webp 1200w, images/moco/oncar-2-large.webp 2000w" sizes="(max-width: 620px) calc(100vw - 66px), (max-width: 1140px) 45vw, 500px" width="640" height="480" alt="" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <h3>Motor Controller &amp; MPPT Interface</h3>
+          <p>24V-to-12V protection and fan control. Five units raced at FSGP 2026 with zero failures.</p>
+          <span class="meta">Sep 2025 – Jun 2026</span>
+        </div>
+      </a>
+      <a class="card" href="lv-carrier.html">
+        <div class="thumb contain"><img src="images/lvc/render-640.webp" srcset="images/lvc/render-640.webp 640w, images/lvc/render-1200.webp 1200w, images/lvc/render-large.webp 1779w" sizes="(max-width: 620px) calc(100vw - 66px), (max-width: 1140px) 45vw, 500px" width="640" height="476" alt="" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <h3>Low-Voltage Carrier Board</h3>
+          <p>150W isolated LV supply from the 120V pack, with precharge and CAN power monitoring.</p>
+          <span class="meta">Jun 2026 – present · In bring-up</span>
+        </div>
+      </a>
     </div>
   </section>
-
-  <section>
-    <h2>Skills</h2>
-    <dl class="skills">
-      <dt>Hardware</dt><dd>Schematic capture, 4-layer PCB layout, power electronics, wire harness design, bring-up &amp; debug, design review</dd>
-      <dt>Lab</dt><dd>Oscilloscope, multimeter, bench power supply, soldering</dd>
-      <dt>Embedded</dt><dd>C, STM32 (L4/G4), FreeRTOS, HAL, CAN, I2C, PWM, ADC</dd>
-      <dt>Tools</dt><dd>KiCad, Git/GitHub, STM32CubeIDE, Python, Java</dd>
-    </dl>
+  <section class="group" id="personal" aria-labelledby="personal-h">
+    <div class="group-head">
+      <h2 id="personal-h">Personal Projects</h2>
+    </div>
+    <div class="cards">
+      <a class="card" href="arduino-interface.html">
+        <div class="thumb"><img src="images/arduino/reva-photo-640.webp" srcset="images/arduino/reva-photo-640.webp 640w, images/arduino/reva-photo-1200.webp 1200w, images/arduino/reva-photo-large.webp 1768w" sizes="(max-width: 620px) calc(100vw - 66px), (max-width: 1140px) 45vw, 500px" width="640" height="387" alt="" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <h3>Arduino Interface Board</h3>
+          <p>12V LED driver with Arduino Nano dimming control and an onboard 12V-to-5V buck.</p>
+          <span class="meta">2025 – 2026 · Rev B designed</span>
+        </div>
+      </a>
+      <a class="card" href="led-controller.html">
+        <div class="thumb empty">Schematic coming soon</div>
+        <div class="body">
+          <h3>Addressable LED Strip Controller</h3>
+          <p>ESP32-S3 controller with USB-PD for audio-reactive LED signs.</p>
+          <span class="meta">Jun 2026 – present · Coming soon</span>
+        </div>
+      </a>
+    </div>
   </section>
-
-  <p class="note">Photos and full write-ups for each project are being added.</p>
-  <footer>© 2026 Jennifer Li</footer>
+  <section class="group" id="coursework" aria-labelledby="coursework-h">
+    <div class="group-head">
+      <h2 id="coursework-h">UT Austin Coursework</h2>
+    </div>
+    <div class="cards">
+      <a class="card" href="ece302-labs.html">
+        <div class="thumb"><img src="images/ece302/lab4-keychain-640.webp" srcset="images/ece302/lab4-keychain-640.webp 640w, images/ece302/lab4-keychain-1200.webp 1200w, images/ece302/lab4-keychain-large.webp 2000w" sizes="(max-width: 620px) calc(100vw - 66px), (max-width: 1140px) 45vw, 500px" width="640" height="480" alt="" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <h3>ECE 302 PCB Labs</h3>
+          <p>An op-amp feedback board and a buck converter.</p>
+          <span class="meta">Spring 2026</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  </div>
 </main>
+
+  <footer class="foot">
+    <span>© 2026 Jennifer Li</span>
+    <a href="mailto:enfutureli@gmail.com">enfutureli@gmail.com</a>
+  </footer>
+</div>
 </body>
 </html>

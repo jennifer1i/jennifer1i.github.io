@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Low-Voltage Carrier Board — Jennifer Li</title>
+  <meta name="description" content="A 4-layer board that delivers 150W from the car&#x27;s 120V pack to every low-voltage system, through an isolated DC/DC that keeps HV and LV grounds separate.">
+  <meta name="theme-color" content="#111513">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Low-Voltage Carrier Board — Jennifer Li">
+  <meta property="og:description" content="A 4-layer board that delivers 150W from the car&#x27;s 120V pack to every low-voltage system, through an isolated DC/DC that keeps HV and LV grounds separate.">
+  <meta property="og:url" content="https://jennifer1i.github.io/lv-carrier.html">
+  <meta property="og:image" content="https://jennifer1i.github.io/images/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="board">
+
+  <nav class="nav" aria-label="Main">
+    <a class="home" href="index.html">Jennifer Li</a>
+    <ul>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="resume.pdf">Resume</a></li>
+      <li><a href="https://github.com/jennifer1i">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/jennifer-li-ece/">LinkedIn</a></li>
+      <li><a href="mailto:enfutureli@gmail.com">Email</a></li>
+    </ul>
+  </nav>
+
+<main class="project">
+  <a class="crumb" href="index.html#lhr">← Longhorn Racing Solar</a>
+  <header>
+    <p class="eyebrow">Longhorn Racing Solar · Jun 2026 – present</p>
+    <h1>Low-Voltage Carrier Board</h1>
+    <p class="lede">A 4-layer board that delivers 150W from the car&#x27;s 120V pack to every low-voltage system, through an isolated DC/DC that keeps HV and LV grounds separate.</p>
+    <ul class="chips">
+      <li>Fabricated · in bring-up</li>
+      <li>4 layers</li>
+      <li>STM32G4 precharge</li>
+      <li>CAN power monitoring</li>
+    </ul>
+  </header>
+
+  <section class="stage">
+    <h2>Rev A</h2>
+    <div class="row">
+      <figure class="shot" style="--ar: 1.333">
+        <a class="zoom" href="images/lvc/arrived-large.webp"><img src="images/lvc/arrived-1200.webp" srcset="images/lvc/arrived-640.webp 640w, images/lvc/arrived-1200.webp 1200w, images/lvc/arrived-large.webp 2000w" sizes="(max-width: 720px) calc(100vw - 66px), 1000px" width="1200" height="900" alt="Fabricated Rev A LV Carrier board" loading="lazy" decoding="async"></a>
+        <figcaption>Back from fab, now in bring-up</figcaption>
+      </figure>
+    </div>
+    <div class="row">
+      <figure class="shot" style="--ar: 1.437">
+        <a class="zoom" href="images/lvc/layout-large.webp"><img src="images/lvc/layout-1200.webp" srcset="images/lvc/layout-640.webp 640w, images/lvc/layout-1200.webp 1200w, images/lvc/layout-large.webp 2000w" sizes="(max-width: 720px) calc(100vw - 66px), 516px" width="1200" height="835" alt="KiCad layout of the LV Carrier board" loading="lazy" decoding="async"></a>
+        <figcaption>Layout (4 layers)</figcaption>
+      </figure>
+      <figure class="shot" style="--ar: 1.346">
+        <a class="zoom" href="images/lvc/render-large.webp"><img src="images/lvc/render-1200.webp" srcset="images/lvc/render-640.webp 640w, images/lvc/render-1200.webp 1200w, images/lvc/render-large.webp 1779w" sizes="(max-width: 720px) calc(100vw - 66px), 484px" width="1200" height="892" alt="3D render of the LV Carrier board with its heatsink" loading="lazy" decoding="async"></a>
+        <figcaption>3D render</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="stage">
+    <h2>Schematic</h2>
+    <div class="row">
+      <figure class="shot" style="--ar: 1.414">
+        <a class="zoom" href="images/lvc/schematic-top-large.webp"><img src="images/lvc/schematic-top-1200.webp" srcset="images/lvc/schematic-top-640.webp 640w, images/lvc/schematic-top-1200.webp 1200w, images/lvc/schematic-top-large.webp 2000w" sizes="(max-width: 720px) calc(100vw - 66px), 1000px" width="1200" height="848" alt="Top-level hierarchical schematic of the LV Carrier" loading="lazy" decoding="async"></a>
+        <figcaption>Top-level schematic, Rev A</figcaption>
+      </figure>
+    </div>
+    <div class="actions"><a class="btn" href="docs/lv-carrier-schematic.pdf">Full schematic (PDF, 29 pages)</a></div>
+  </section>
+
+  <a class="next" href="arduino-interface.html">
+    <span><span class="label">Next project</span><span class="name">Arduino Interface Board</span></span>
+    <span class="arrow" aria-hidden="true">→</span>
+  </a>
+</main>
+
+  <footer class="foot">
+    <span>© 2026 Jennifer Li</span>
+    <a href="mailto:enfutureli@gmail.com">enfutureli@gmail.com</a>
+  </footer>
+</div>
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <img alt="">
+  <p class="lb-cap"></p>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
